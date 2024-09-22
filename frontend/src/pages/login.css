@@ -1,0 +1,61 @@
+/* General styles for login container */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background-color: #f4f4f4; /* Light background color */
+  }
+  
+  /* Header styles for login */
+  header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    width: 100%; /* Full width */
+    text-align: center;
+    margin: 0; /* Remove margin */
+  }
+  
+  /* Form container styles */
+  .form-container {
+    background-color: white;
+    padding: 40px; /* Padding for the container */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 400px; /* Width of the form */
+    display: flex;
+    flex-direction: column; /* Stack inputs vertically */
+  }
+  
+  /* Input styles */
+  input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px; /* Space between inputs */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Button styles */
+  button {
+    width: 100%;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #555; /* Darker on hover */
+  }
+  
+  /* Reset margins for h1 */
+  h1 {
+    margin: 0; /* Remove default margin */
+    padding: 20px 0; /* Add padding for spacing */
+  }
+  
