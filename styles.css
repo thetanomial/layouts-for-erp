@@ -1,0 +1,176 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "aside main";
+    grid-template-columns: 190px 1fr;
+    grid-template-rows: 80px 1fr;
+    height: 100vh;
+}
+
+/* Header styles */
+header {
+    grid-area: header;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Ensure it's positioned relative to the grid */
+    left: 250px; /* Offset to start after the sidebar */
+    width: calc(100% - 250px); /* Full width minus sidebar width */
+}
+
+header h1 {
+    margin: 0; /* Reset margin for the heading */
+}
+
+/* Sidebar styles */
+aside {
+    grid-area: aside;
+    background-color: #f4f4f4;
+    padding: 20px;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    height: 100vh; /* Full height */
+    justify-content: space-between;
+}
+
+/* User details area (top 35%) */
+.user-details {
+    flex: 0 0 35%;
+    background-color: #ddd;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 10px; /* Round the corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+    transition: transform 0.2s; /* Transition for hover effect */
+}
+
+
+/* Navigation area (remaining 65%) */
+nav {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Main content styles */
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-rows: repeat(2, 1fr);    /* Two rows */
+    gap: 20px;
+    padding: 20px;
+    background-color: #fff;
+    margin-left: 100px; /* Offset to start after the sidebar */
+    width: calc(100% - 155px); /* Full width minus sidebar width */
+}
+
+/* Styles for the divs inside main */
+main > div {
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        grid-template-areas:
+            "header"
+            "main"
+            "aside";
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px 1fr 250px;
+    }
+
+    aside {
+        padding: 10px;
+    }
+
+    main {
+        margin-left: 0; /* Remove margin for small screens */
+        width: 100%; /* Full width */
+        grid-template-columns: 1fr;  /* Single column layout */
+        grid-template-rows: repeat(4, 1fr); /* Four rows for small screens */
+    }
+}
+
+/* Avatar styles */
+.user-details:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 15px;
+    border: 3px solid #333; /* Border around the avatar */
+}
+
+.user-info {
+    text-align: center;
+}
+
+.user-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 5px 0;
+}
+
+.user-email {
+    font-size: 1rem;
+    color: #777;
+    margin: 0;
+}
+
+/* Hover effect for links */
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+/* Logout button styles */
+.logout {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.logout-btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 8rem;
+    box-sizing: border-box;
+}
+
+.logout-btn:hover {
+    background-color: #555;
+}
